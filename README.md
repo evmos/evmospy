@@ -36,3 +36,7 @@ cd /usr/local/lib
 sudo ln -s libcrypto.3.dylib libcrypto.dylib
 sudo ln -s libssl.3.dylib libssl.dylib
 ```
+
+## Usage
+
+Inside each `./evmospy/<module>/` there is a README file with an example on how to use the module.
