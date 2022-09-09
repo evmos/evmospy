@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.cosmos.distribution.v1beta1 import tx_pb2 as cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2
+from evmospy.evmosproto.cosmos.distribution.v1beta1 import tx_pb2 as cosmos_dot_distribution_dot_v1beta1_dot_tx__pb2
 
 
 class MsgStub(object):
@@ -51,7 +51,7 @@ class MsgServicer(object):
 
     def WithdrawDelegatorReward(self, request, context):
         """WithdrawDelegatorReward defines a method to withdraw rewards of delegator
-        from evmosproto.a single validator.
+        from evmospy.evmosproto.a single validator.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

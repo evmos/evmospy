@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.cosmos.staking.v1beta1 import tx_pb2 as cosmos_dot_staking_dot_v1beta1_dot_tx__pb2
+from evmospy.evmosproto.cosmos.staking.v1beta1 import tx_pb2 as cosmos_dot_staking_dot_v1beta1_dot_tx__pb2
 
 
 class MsgStub(object):
@@ -62,7 +62,7 @@ class MsgServicer(object):
 
     def Delegate(self, request, context):
         """Delegate defines a method for performing a delegation of coins
-        from evmosproto.a delegator to a validator.
+        from evmospy.evmosproto.a delegator to a validator.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -70,14 +70,14 @@ class MsgServicer(object):
 
     def BeginRedelegate(self, request, context):
         """BeginRedelegate defines a method for performing a redelegation
-        of coins from evmosproto.a delegator and source validator to a destination validator.
+        of coins from evmospy.evmosproto.a delegator and source validator to a destination validator.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def Undelegate(self, request, context):
-        """Undelegate defines a method for performing an undelegation from evmosproto.a
+        """Undelegate defines a method for performing an undelegation from evmospy.evmosproto.a
         delegate and a validator.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)

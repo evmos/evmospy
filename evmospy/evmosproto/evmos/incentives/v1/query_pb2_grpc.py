@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.evmos.incentives.v1 import query_pb2 as evmos_dot_incentives_dot_v1_dot_query__pb2
+from evmospy.evmosproto.evmos.incentives.v1 import query_pb2 as evmos_dot_incentives_dot_v1_dot_query__pb2
 
 
 class QueryStub(object):

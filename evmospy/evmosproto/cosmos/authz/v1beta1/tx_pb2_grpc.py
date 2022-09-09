@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.cosmos.authz.v1beta1 import tx_pb2 as cosmos_dot_authz_dot_v1beta1_dot_tx__pb2
+from evmospy.evmosproto.cosmos.authz.v1beta1 import tx_pb2 as cosmos_dot_authz_dot_v1beta1_dot_tx__pb2
 
 
 class MsgStub(object):
@@ -56,8 +56,8 @@ class MsgServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def Revoke(self, request, context):
-        """Revoke revokes any authorization corresponding to the provided method name
-        on the granter's account that has been granted to the grantee.
+        """Revoke revokes any authorization corresponding to the provided method name on the
+        granter's account that has been granted to the grantee.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

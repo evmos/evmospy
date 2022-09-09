@@ -1,7 +1,7 @@
 import pytest
 
-from evmoswallet.converter import eth_to_evmos
-from evmoswallet.converter import evmos_to_eth
+from evmospy.evmoswallet.converter import eth_to_evmos
+from evmospy.evmoswallet.converter import evmos_to_eth
 
 
 @pytest.mark.parametrize(

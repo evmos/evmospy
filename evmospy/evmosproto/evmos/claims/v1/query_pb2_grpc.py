@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.evmos.claims.v1 import query_pb2 as evmos_dot_claims_dot_v1_dot_query__pb2
+from evmospy.evmosproto.evmos.claims.v1 import query_pb2 as evmos_dot_claims_dot_v1_dot_query__pb2
 
 
 class QueryStub(object):
@@ -42,7 +42,7 @@ class QueryServicer(object):
     """
 
     def TotalUnclaimed(self, request, context):
-        """TotalUnclaimed queries the total unclaimed tokens from evmosproto.the airdrop
+        """TotalUnclaimed queries the total unclaimed tokens from evmospy.evmosproto.the airdrop
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -56,7 +56,7 @@ class QueryServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ClaimsRecords(self, request, context):
-        """ClaimsRecords returns all the claims record
+        """ClaimsRecords returns all claims records
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

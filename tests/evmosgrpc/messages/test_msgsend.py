@@ -1,4 +1,4 @@
-from evmosgrpc.messages.msgsend import create_msg_send
+from evmospy.evmosgrpc.messages.msgsend import create_msg_send
 
 
 def test_create_msg_send():

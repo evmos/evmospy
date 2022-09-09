@@ -2,8 +2,8 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.ethermint.evm.v1 import query_pb2 as ethermint_dot_evm_dot_v1_dot_query__pb2
-from evmosproto.ethermint.evm.v1 import tx_pb2 as ethermint_dot_evm_dot_v1_dot_tx__pb2
+from evmospy.evmosproto.ethermint.evm.v1 import query_pb2 as ethermint_dot_evm_dot_v1_dot_query__pb2
+from evmospy.evmosproto.ethermint.evm.v1 import tx_pb2 as ethermint_dot_evm_dot_v1_dot_tx__pb2
 
 
 class QueryStub(object):
@@ -46,21 +46,6 @@ class QueryStub(object):
                 request_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryCodeRequest.SerializeToString,
                 response_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryCodeResponse.FromString,
                 )
-        self.TxLogs = channel.unary_unary(
-                '/ethermint.evm.v1.Query/TxLogs',
-                request_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTxLogsRequest.SerializeToString,
-                response_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTxLogsResponse.FromString,
-                )
-        self.BlockLogs = channel.unary_unary(
-                '/ethermint.evm.v1.Query/BlockLogs',
-                request_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockLogsRequest.SerializeToString,
-                response_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockLogsResponse.FromString,
-                )
-        self.BlockBloom = channel.unary_unary(
-                '/ethermint.evm.v1.Query/BlockBloom',
-                request_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockBloomRequest.SerializeToString,
-                response_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockBloomResponse.FromString,
-                )
         self.Params = channel.unary_unary(
                 '/ethermint.evm.v1.Query/Params',
                 request_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryParamsRequest.SerializeToString,
@@ -75,6 +60,21 @@ class QueryStub(object):
                 '/ethermint.evm.v1.Query/EstimateGas',
                 request_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.EthCallRequest.SerializeToString,
                 response_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.EstimateGasResponse.FromString,
+                )
+        self.TraceTx = channel.unary_unary(
+                '/ethermint.evm.v1.Query/TraceTx',
+                request_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceTxRequest.SerializeToString,
+                response_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceTxResponse.FromString,
+                )
+        self.TraceBlock = channel.unary_unary(
+                '/ethermint.evm.v1.Query/TraceBlock',
+                request_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceBlockRequest.SerializeToString,
+                response_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceBlockResponse.FromString,
+                )
+        self.BaseFee = channel.unary_unary(
+                '/ethermint.evm.v1.Query/BaseFee',
+                request_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBaseFeeRequest.SerializeToString,
+                response_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBaseFeeResponse.FromString,
                 )
 
 
@@ -97,7 +97,7 @@ class QueryServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def ValidatorAccount(self, request, context):
-        """ValidatorAccount queries an Ethereum account's from evmosproto.a validator consensus
+        """ValidatorAccount queries an Ethereum account's from evmospy.evmosproto.a validator consensus
         Address.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -126,27 +126,6 @@ class QueryServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def TxLogs(self, request, context):
-        """TxLogs queries ethereum logs from evmosproto.a transaction.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def BlockLogs(self, request, context):
-        """BlockLogs queries all the ethereum logs for a given block hash.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def BlockBloom(self, request, context):
-        """BlockBloom queries the block bloom filter bytes at a given height.
-        """
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
     def Params(self, request, context):
         """Params queries the parameters of x/evm module.
         """
@@ -163,6 +142,28 @@ class QueryServicer(object):
 
     def EstimateGas(self, request, context):
         """EstimateGas implements the `eth_estimateGas` rpc api
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TraceTx(self, request, context):
+        """TraceTx implements the `debug_traceTransaction` rpc api
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def TraceBlock(self, request, context):
+        """TraceBlock implements the `debug_traceBlockByNumber` and `debug_traceBlockByHash` rpc api
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def BaseFee(self, request, context):
+        """BaseFee queries the base fee of the parent block of the current block,
+        it's similar to feemarket module's method, but also checks london hardfork status.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -201,21 +202,6 @@ def add_QueryServicer_to_server(servicer, server):
                     request_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryCodeRequest.FromString,
                     response_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryCodeResponse.SerializeToString,
             ),
-            'TxLogs': grpc.unary_unary_rpc_method_handler(
-                    servicer.TxLogs,
-                    request_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTxLogsRequest.FromString,
-                    response_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTxLogsResponse.SerializeToString,
-            ),
-            'BlockLogs': grpc.unary_unary_rpc_method_handler(
-                    servicer.BlockLogs,
-                    request_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockLogsRequest.FromString,
-                    response_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockLogsResponse.SerializeToString,
-            ),
-            'BlockBloom': grpc.unary_unary_rpc_method_handler(
-                    servicer.BlockBloom,
-                    request_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockBloomRequest.FromString,
-                    response_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockBloomResponse.SerializeToString,
-            ),
             'Params': grpc.unary_unary_rpc_method_handler(
                     servicer.Params,
                     request_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryParamsRequest.FromString,
@@ -230,6 +216,21 @@ def add_QueryServicer_to_server(servicer, server):
                     servicer.EstimateGas,
                     request_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.EthCallRequest.FromString,
                     response_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.EstimateGasResponse.SerializeToString,
+            ),
+            'TraceTx': grpc.unary_unary_rpc_method_handler(
+                    servicer.TraceTx,
+                    request_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceTxRequest.FromString,
+                    response_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceTxResponse.SerializeToString,
+            ),
+            'TraceBlock': grpc.unary_unary_rpc_method_handler(
+                    servicer.TraceBlock,
+                    request_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceBlockRequest.FromString,
+                    response_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceBlockResponse.SerializeToString,
+            ),
+            'BaseFee': grpc.unary_unary_rpc_method_handler(
+                    servicer.BaseFee,
+                    request_deserializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBaseFeeRequest.FromString,
+                    response_serializer=ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBaseFeeResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -345,57 +346,6 @@ class Query(object):
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def TxLogs(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ethermint.evm.v1.Query/TxLogs',
-            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTxLogsRequest.SerializeToString,
-            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTxLogsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def BlockLogs(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ethermint.evm.v1.Query/BlockLogs',
-            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockLogsRequest.SerializeToString,
-            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockLogsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def BlockBloom(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ethermint.evm.v1.Query/BlockBloom',
-            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockBloomRequest.SerializeToString,
-            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBlockBloomResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
     def Params(request,
             target,
             options=(),
@@ -443,5 +393,56 @@ class Query(object):
         return grpc.experimental.unary_unary(request, target, '/ethermint.evm.v1.Query/EstimateGas',
             ethermint_dot_evm_dot_v1_dot_query__pb2.EthCallRequest.SerializeToString,
             ethermint_dot_evm_dot_v1_dot_query__pb2.EstimateGasResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TraceTx(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ethermint.evm.v1.Query/TraceTx',
+            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceTxRequest.SerializeToString,
+            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceTxResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TraceBlock(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ethermint.evm.v1.Query/TraceBlock',
+            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceBlockRequest.SerializeToString,
+            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryTraceBlockResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def BaseFee(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ethermint.evm.v1.Query/BaseFee',
+            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBaseFeeRequest.SerializeToString,
+            ethermint_dot_evm_dot_v1_dot_query__pb2.QueryBaseFeeResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

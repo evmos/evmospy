@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.cosmos.evidence.v1beta1 import tx_pb2 as cosmos_dot_evidence_dot_v1beta1_dot_tx__pb2
+from evmospy.evmosproto.cosmos.evidence.v1beta1 import tx_pb2 as cosmos_dot_evidence_dot_v1beta1_dot_tx__pb2
 
 
 class MsgStub(object):
@@ -27,8 +27,8 @@ class MsgServicer(object):
     """
 
     def SubmitEvidence(self, request, context):
-        """SubmitEvidence submits an arbitrary Evidence of misbehavior such as
-        equivocation or counterfactual signing.
+        """SubmitEvidence submits an arbitrary Evidence of misbehavior such as equivocation or
+        counterfactual signing.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

@@ -3,7 +3,7 @@ package evmos.claims.v1;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/tharsis/evmos/x/claims/types";
+option go_package = "github.com/evmos/evmos/v8/x/claims/types";
 
 // Action defines the list of available actions to claim the airdrop tokens.
 enum Action {
@@ -23,8 +23,8 @@ enum Action {
       [ (gogoproto.enumvalue_customname) = "ActionIBCTransfer" ];
 }
 
-// Claim marks defines the action, completed flag and the remaining claimable
-// amount for a given user. This is only used during client queries.
+// Claim defines the action, completed flag and the remaining claimable amount
+// for a given user. This is only used during client queries.
 message Claim {
   // action enum
   Action action = 1;
@@ -37,7 +37,8 @@ message Claim {
   ];
 }
 
-// ClaimsRecordAddress is the metadata of claims data per address
+// ClaimsRecordAddress is the claims metadata per address that is used at
+// Genesis.
 message ClaimsRecordAddress {
   // bech32 or hex address of claim user
   string address = 1;

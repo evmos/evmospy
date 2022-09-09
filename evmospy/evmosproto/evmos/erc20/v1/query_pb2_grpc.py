@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.evmos.erc20.v1 import query_pb2 as evmos_dot_erc20_dot_v1_dot_query__pb2
+from evmospy.evmosproto.evmos.erc20.v1 import query_pb2 as evmos_dot_erc20_dot_v1_dot_query__pb2
 
 
 class QueryStub(object):
@@ -37,14 +37,14 @@ class QueryServicer(object):
     """
 
     def TokenPairs(self, request, context):
-        """Retrieves registered token pairs
+        """TokenPairs retrieves registered token pairs
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def TokenPair(self, request, context):
-        """Retrieves a registered token pair
+        """TokenPair retrieves a registered token pair
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

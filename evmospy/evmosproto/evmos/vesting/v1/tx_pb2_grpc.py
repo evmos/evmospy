@@ -2,11 +2,11 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.evmos.vesting.v1 import tx_pb2 as evmos_dot_vesting_dot_v1_dot_tx__pb2
+from evmospy.evmosproto.evmos.vesting.v1 import tx_pb2 as evmos_dot_vesting_dot_v1_dot_tx__pb2
 
 
 class MsgStub(object):
-    """Msg defines the bank Msg service.
+    """Msg defines the vesting Msg service.
     """
 
     def __init__(self, channel):
@@ -28,19 +28,19 @@ class MsgStub(object):
 
 
 class MsgServicer(object):
-    """Msg defines the bank Msg service.
+    """Msg defines the vesting Msg service.
     """
 
     def CreateClawbackVestingAccount(self, request, context):
-        """CreateClawbackVestingAccount defines a method that enables creating a
-        vesting account that is subject to clawback.
+        """CreateClawbackVestingAccount creats a vesting account that is subject to
+        clawback and the configuration of vesting and lockup schedules.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def Clawback(self, request, context):
-        """Clawback removes the unvested tokens from evmosproto.a ClawbackVestingAccount.
+        """Clawback removes the unvested tokens from evmospy.evmosproto.a ClawbackVestingAccount.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -67,7 +67,7 @@ def add_MsgServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class Msg(object):
-    """Msg defines the bank Msg service.
+    """Msg defines the vesting Msg service.
     """
 
     @staticmethod

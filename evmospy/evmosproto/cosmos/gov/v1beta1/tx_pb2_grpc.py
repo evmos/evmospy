@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.cosmos.gov.v1beta1 import tx_pb2 as cosmos_dot_gov_dot_v1beta1_dot_tx__pb2
+from evmospy.evmosproto.cosmos.gov.v1beta1 import tx_pb2 as cosmos_dot_gov_dot_v1beta1_dot_tx__pb2
 
 
 class MsgStub(object):
@@ -56,8 +56,9 @@ class MsgServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def VoteWeighted(self, request, context):
-        """VoteWeighted defines a method to add a weighted vote on a specific
-        proposal.
+        """VoteWeighted defines a method to add a weighted vote on a specific proposal.
+
+        Since: cosmos-sdk 0.43
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

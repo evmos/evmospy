@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.cosmos.base.reflection.v2alpha1 import reflection_pb2 as cosmos_dot_base_dot_reflection_dot_v2alpha1_dot_reflection__pb2
+from evmospy.evmosproto.cosmos.base.reflection.v2alpha1 import reflection_pb2 as cosmos_dot_base_dot_reflection_dot_v2alpha1_dot_reflection__pb2
 
 
 class ReflectionServiceStub(object):
@@ -52,10 +52,9 @@ class ReflectionServiceServicer(object):
     """
 
     def GetAuthnDescriptor(self, request, context):
-        """GetAuthnDescriptor returns information on how to authenticate transactions
-        in the application NOTE: this RPC is still experimental and might be
-        subject to breaking changes or removal in future releases of the
-        cosmos-sdk.
+        """GetAuthnDescriptor returns information on how to authenticate transactions in the application
+        NOTE: this RPC is still experimental and might be subject to breaking changes or removal in
+        future releases of the cosmos-sdk.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -76,24 +75,21 @@ class ReflectionServiceServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def GetConfigurationDescriptor(self, request, context):
-        """GetConfigurationDescriptor returns the descriptor for the sdk.Config of the
-        application
+        """GetConfigurationDescriptor returns the descriptor for the sdk.Config of the application
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetQueryServicesDescriptor(self, request, context):
-        """GetQueryServicesDescriptor returns the available gRPC queryable services of
-        the application
+        """GetQueryServicesDescriptor returns the available gRPC queryable services of the application
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def GetTxDescriptor(self, request, context):
-        """GetTxDescriptor returns information on the used transaction object and
-        available msgs that can be used
+        """GetTxDescriptor returns information on the used transaction object and available msgs that can be used
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

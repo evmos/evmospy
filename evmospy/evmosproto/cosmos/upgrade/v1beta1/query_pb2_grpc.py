@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.cosmos.upgrade.v1beta1 import query_pb2 as cosmos_dot_upgrade_dot_v1beta1_dot_query__pb2
+from evmospy.evmosproto.cosmos.upgrade.v1beta1 import query_pb2 as cosmos_dot_upgrade_dot_v1beta1_dot_query__pb2
 
 
 class QueryStub(object):
@@ -60,13 +60,17 @@ class QueryServicer(object):
         as a trusted kernel for the next version of this chain. It will only be
         stored at the last height of this chain.
         UpgradedConsensusState RPC not supported with legacy querier
+        This rpc is deprecated now that IBC has its own replacement
+        (https://github.com/cosmos/ibc-go/blob/2c880a22e9f9cc75f62b527ca94aa75ce1106001/proto/ibc/core/client/v1/query.proto#L54)
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ModuleVersions(self, request, context):
-        """ModuleVersions queries the list of module versions from evmosproto.state.
+        """ModuleVersions queries the list of module versions from evmospy.evmosproto.state.
+
+        Since: cosmos-sdk 0.43
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')

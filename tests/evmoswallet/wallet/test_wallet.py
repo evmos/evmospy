@@ -1,4 +1,4 @@
-from evmoswallet import Wallet
+from evmospy.evmoswallet import Wallet
 
 
 def test_wallet():

@@ -1,7 +1,7 @@
 import pytest
 
-from pyevmosaddressconverter import eth_to_evmos
-from pyevmosaddressconverter import evmos_to_eth
+from evmospy.pyevmosaddressconverter import eth_to_evmos
+from evmospy.pyevmosaddressconverter import evmos_to_eth
 
 
 @pytest.mark.parametrize(

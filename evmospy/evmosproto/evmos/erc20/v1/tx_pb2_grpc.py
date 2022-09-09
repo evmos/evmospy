@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-from evmosproto.evmos.erc20.v1 import tx_pb2 as evmos_dot_erc20_dot_v1_dot_tx__pb2
+from evmospy.evmosproto.evmos.erc20.v1 import tx_pb2 as evmos_dot_erc20_dot_v1_dot_tx__pb2
 
 
 class MsgStub(object):
@@ -32,16 +32,16 @@ class MsgServicer(object):
     """
 
     def ConvertCoin(self, request, context):
-        """ConvertCoin mints a ERC20 representation of the SDK Coin denom that is
-        registered on the token mapping.
+        """ConvertCoin mints a ERC20 representation of the native Cosmos coin denom
+        that is registered on the token mapping.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
     def ConvertERC20(self, request, context):
-        """ConvertERC20 mints a Cosmos coin representation of the ERC20 token contract
-        that is registered on the token mapping.
+        """ConvertERC20 mints a native Cosmos coin representation of the ERC20 token
+        contract that is registered on the token mapping.
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
