@@ -17,12 +17,12 @@ import base58
 from Cryptodome.Hash import keccak
 from mnemonic.mnemonic import Mnemonic
 
-from evmoswallet.crypto.ecdsa import ECPointAffine
-from evmoswallet.crypto.ecdsa import secp256k1
-from evmoswallet.crypto.ecdsa_base import Point
-from evmoswallet.crypto.utils import address_to_key_hash
-from evmoswallet.crypto.utils import bytes_to_str
-from evmoswallet.crypto.utils import rand_bytes
+from evmospy.evmoswallet.crypto.ecdsa import ECPointAffine
+from evmospy.evmoswallet.crypto.ecdsa import secp256k1
+from evmospy.evmoswallet.crypto.ecdsa_base import Point
+from evmospy.evmoswallet.crypto.utils import address_to_key_hash
+from evmospy.evmoswallet.crypto.utils import bytes_to_str
+from evmospy.evmoswallet.crypto.utils import rand_bytes
 
 bitcoin_curve = secp256k1()
 

@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import binascii
 
-from pyevmosaddressconverter.enconder.bech32 import bech32_decode
-from pyevmosaddressconverter.enconder.bech32 import bech32_encode
-from pyevmosaddressconverter.enconder.bech32 import convertbits
-from pyevmosaddressconverter.enconder.bech32 import Encoding
+from evmospy.pyevmosaddressconverter.enconder.bech32 import bech32_decode
+from evmospy.pyevmosaddressconverter.enconder.bech32 import bech32_encode
+from evmospy.pyevmosaddressconverter.enconder.bech32 import convertbits
+from evmospy.pyevmosaddressconverter.enconder.bech32 import Encoding
 
 EVMOS_PREFIX = 'evmos'
 ETH_PREFIX = '0x'

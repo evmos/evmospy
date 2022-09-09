@@ -1,26 +1,26 @@
-from evmosproto.cosmos.base.v1beta1.coin_pb2 import Coin
-from evmosproto.cosmos.crypto.secp256k1.keys_pb2 import PubKey as Secp256PubKey
-from evmosproto.cosmos.tx.signing.v1beta1.signing_pb2 import SIGN_MODE_DIRECT
-from evmosproto.cosmos.tx.v1beta1.tx_pb2 import AuthInfo
-from evmosproto.cosmos.tx.v1beta1.tx_pb2 import Fee
-from evmosproto.cosmos.tx.v1beta1.tx_pb2 import ModeInfo
-from evmosproto.cosmos.tx.v1beta1.tx_pb2 import SignDoc
-from evmosproto.cosmos.tx.v1beta1.tx_pb2 import SignerInfo
-from evmosproto.cosmos.tx.v1beta1.tx_pb2 import TxBody
-from evmosproto.cosmos.tx.v1beta1.tx_pb2 import TxRaw
-from evmosproto.ethermint.crypto.v1.ethsecp256k1.keys_pb2 import PubKey
-from evmosproto.google.protobuf.any_pb2 import Any
-from evmoswallet.eth.ethereum import sha3_256
+from evmospy.evmosproto.cosmos.base.v1beta1.coin_pb2 import Coin
+from evmospy.evmosproto.cosmos.crypto.secp256k1.keys_pb2 import PubKey as Secp256PubKey
+from evmospy.evmosproto.cosmos.tx.signing.v1beta1.signing_pb2 import SIGN_MODE_DIRECT
+from evmospy.evmosproto.cosmos.tx.v1beta1.tx_pb2 import AuthInfo
+from evmospy.evmosproto.cosmos.tx.v1beta1.tx_pb2 import Fee
+from evmospy.evmosproto.cosmos.tx.v1beta1.tx_pb2 import ModeInfo
+from evmospy.evmosproto.cosmos.tx.v1beta1.tx_pb2 import SignDoc
+from evmospy.evmosproto.cosmos.tx.v1beta1.tx_pb2 import SignerInfo
+from evmospy.evmosproto.cosmos.tx.v1beta1.tx_pb2 import TxBody
+from evmospy.evmosproto.cosmos.tx.v1beta1.tx_pb2 import TxRaw
+from evmospy.evmosproto.ethermint.crypto.v1.ethsecp256k1.keys_pb2 import PubKey
+from evmospy.evmosproto.google.protobuf.any_pb2 import Any
+from evmospy.evmoswallet.eth.ethereum import sha3_256
 from google.protobuf.message import Message
 
-from evmosgrpc.builder import TransactionBuilder
-from evmosgrpc.constants import CHAIN_ID
-from evmosgrpc.constants import DENOM
-from evmosgrpc.constants import ETHSECP256K1
-from evmosgrpc.constants import FEE
-from evmosgrpc.constants import GAS_LIMIT
-from evmosgrpc.constants import MEMO
-from evmosgrpc.constants import SECP256K1
+from evmospy.evmosgrpc.builder import TransactionBuilder
+from evmospy.evmosgrpc.constants import CHAIN_ID
+from evmospy.evmosgrpc.constants import DENOM
+from evmospy.evmosgrpc.constants import ETHSECP256K1
+from evmospy.evmosgrpc.constants import FEE
+from evmospy.evmosgrpc.constants import GAS_LIMIT
+from evmospy.evmosgrpc.constants import MEMO
+from evmospy.evmosgrpc.constants import SECP256K1
 
 
 class Transaction:

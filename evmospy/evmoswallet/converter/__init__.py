@@ -1,10 +1,10 @@
 import binascii
 from typing import Union
 
-from evmoswallet.converter.bech32 import bech32_decode
-from evmoswallet.converter.bech32 import bech32_encode
-from evmoswallet.converter.bech32 import convertbits
-from evmoswallet.converter.bech32 import Encoding
+from evmospy.evmoswallet.converter.bech32 import bech32_decode
+from evmospy.evmoswallet.converter.bech32 import bech32_encode
+from evmospy.evmoswallet.converter.bech32 import convertbits
+from evmospy.evmoswallet.converter.bech32 import Encoding
 
 EVMOS_PREFIX = 'evmos'
 ETH_PREFIX = '0x'

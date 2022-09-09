@@ -1,11 +1,11 @@
-from evmosproto.cosmos.auth.v1beta1.query_pb2 import QueryAccountRequest
-from evmosproto.cosmos.auth.v1beta1.query_pb2_grpc import QueryStub
-from evmosproto.cosmos.bank.v1beta1.query_pb2 import QueryAllBalancesRequest
-from evmosproto.cosmos.bank.v1beta1.query_pb2_grpc import QueryStub as BalanceStub
-from evmosproto.ethermint.types.v1.account_pb2 import EthAccount
+from evmospy.evmosproto.cosmos.auth.v1beta1.query_pb2 import QueryAccountRequest
+from evmospy.evmosproto.cosmos.auth.v1beta1.query_pb2_grpc import QueryStub
+from evmospy.evmosproto.cosmos.bank.v1beta1.query_pb2 import QueryAllBalancesRequest
+from evmospy.evmosproto.cosmos.bank.v1beta1.query_pb2_grpc import QueryStub as BalanceStub
+from evmospy.evmosproto.ethermint.types.v1.account_pb2 import EthAccount
 from google.protobuf.json_format import MessageToDict
 
-from evmosgrpc.utils import create_grpc_channel
+from evmospy.evmosgrpc.utils import create_grpc_channel
 
 
 # Get account, returns pub_key, account_number, sequence

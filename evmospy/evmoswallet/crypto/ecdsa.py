@@ -1,7 +1,7 @@
 try:
-    from evmoswallet.crypto import ecdsa_openssl as _ecdsa
+    from evmospy.evmoswallet.crypto import ecdsa_openssl as _ecdsa
 except Exception:
-    from evmoswallet.crypto import ecdsa_python as _ecdsa
+    from evmospy.evmoswallet.crypto import ecdsa_python as _ecdsa
 
 ECPointAffine = _ecdsa.ECPointAffine
 EllipticCurve = _ecdsa.EllipticCurve

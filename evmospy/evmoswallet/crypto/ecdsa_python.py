@@ -3,7 +3,7 @@ import math
 import random
 from collections import namedtuple
 
-from evmoswallet.crypto.ecdsa_base import EllipticCurveBase
+from evmospy.evmoswallet.crypto.ecdsa_base import EllipticCurveBase
 
 # Links
 # https://en.wikibooks.org/wiki/Cryptography/Elliptic_curve

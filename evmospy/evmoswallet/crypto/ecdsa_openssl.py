@@ -5,9 +5,9 @@ from ctypes import c_char_p
 from ctypes import c_void_p
 from ctypes import create_string_buffer
 
-from evmoswallet.crypto import openssl as ossl
-from evmoswallet.crypto.ecdsa_base import EllipticCurveBase
-from evmoswallet.crypto.ecdsa_base import Point
+from evmospy.evmoswallet.crypto import openssl as ossl
+from evmospy.evmoswallet.crypto.ecdsa_base import EllipticCurveBase
+from evmospy.evmoswallet.crypto.ecdsa_base import Point
 
 
 class ECPointAffine:

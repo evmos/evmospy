@@ -2,9 +2,9 @@ import coincurve
 from coincurve._libsecp256k1 import ffi
 from coincurve._libsecp256k1 import lib
 
-from evmoswallet.converter import eth_to_evmos
-from evmoswallet.eth.ethereum import HDKey
-from evmoswallet.eth.ethereum import HDPrivateKey
+from evmospy.evmoswallet.converter import eth_to_evmos
+from evmospy.evmoswallet.eth.ethereum import HDKey
+from evmospy.evmoswallet.eth.ethereum import HDPrivateKey
 
 
 class Wallet:

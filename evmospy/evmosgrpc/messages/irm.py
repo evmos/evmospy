@@ -1,11 +1,11 @@
 import json
 
-from evmosproto.evmos.intrarelayer.v1.intrarelayer_pb2 import RegisterCoinProposal
-from evmosproto.evmos.intrarelayer.v1.intrarelayer_pb2 import RegisterERC20Proposal
-from evmosproto.evmos.intrarelayer.v1.intrarelayer_pb2 import ToggleTokenRelayProposal
-from evmosproto.evmos.intrarelayer.v1.intrarelayer_pb2 import UpdateTokenPairERC20Proposal
-from evmosproto.evmos.intrarelayer.v1.tx_pb2 import MsgConvertCoin
-from evmosproto.evmos.intrarelayer.v1.tx_pb2 import MsgConvertERC20
+from evmospy.evmosproto.evmos.intrarelayer.v1.intrarelayer_pb2 import RegisterCoinProposal
+from evmospy.evmosproto.evmos.intrarelayer.v1.intrarelayer_pb2 import RegisterERC20Proposal
+from evmospy.evmosproto.evmos.intrarelayer.v1.intrarelayer_pb2 import ToggleTokenRelayProposal
+from evmospy.evmosproto.evmos.intrarelayer.v1.intrarelayer_pb2 import UpdateTokenPairERC20Proposal
+from evmospy.evmosproto.evmos.intrarelayer.v1.tx_pb2 import MsgConvertCoin
+from evmospy.evmosproto.evmos.intrarelayer.v1.tx_pb2 import MsgConvertERC20
 from google.protobuf.json_format import Parse
 
 

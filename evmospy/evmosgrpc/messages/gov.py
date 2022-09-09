@@ -1,15 +1,15 @@
 import json
 
-from evmosproto.cosmos.base.v1beta1.coin_pb2 import Coin
-from evmosproto.cosmos.gov.v1beta1.tx_pb2 import MsgSubmitProposal
-from evmosproto.google.protobuf.any_pb2 import Any
+from evmospy.evmosproto.cosmos.base.v1beta1.coin_pb2 import Coin
+from evmospy.evmosproto.cosmos.gov.v1beta1.tx_pb2 import MsgSubmitProposal
+from evmospy.evmosproto.google.protobuf.any_pb2 import Any
 from google.protobuf.json_format import MessageToDict
 from google.protobuf.json_format import Parse
 
-from evmosgrpc.constants import DENOM
-from evmosgrpc.constants import PROPOSAL_MIN_AMOUNT
-from evmosgrpc.messages.irm import create_register_coin_proposal
-from evmosgrpc.messages.irm import create_register_erc20_proposal
+from evmospy.evmosgrpc.constants import DENOM
+from evmospy.evmosgrpc.constants import PROPOSAL_MIN_AMOUNT
+from evmospy.evmosgrpc.messages.irm import create_register_coin_proposal
+from evmospy.evmosgrpc.messages.irm import create_register_erc20_proposal
 
 
 def create_submit_proposal(content, initial_deposit, proposer):

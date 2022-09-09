@@ -4,10 +4,10 @@ import grpc
 from evmoswallet import Wallet
 from google.protobuf.message import Message
 
-from evmosgrpc.accounts import get_account_grpc
-from evmosgrpc.broadcaster import broadcast
-from evmosgrpc.constants import ETHSECP256K1
-from evmosgrpc.constants import SECP256K1
+from evmospy.evmosgrpc.accounts import get_account_grpc
+from evmospy.evmosgrpc.broadcaster import broadcast
+from evmospy.evmosgrpc.constants import ETHSECP256K1
+from evmospy.evmosgrpc.constants import SECP256K1
 
 
 class TransactionBuilder():

@@ -1,6 +1,6 @@
 import grpc
 
-from evmosgrpc.constants import GRPC_ENDPOINT
+from evmospy.evmosgrpc.constants import GRPC_ENDPOINT
 
 
 def create_grpc_channel(endpoint=GRPC_ENDPOINT):
