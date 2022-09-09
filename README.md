@@ -1,6 +1,6 @@
 # Evmospy
 
-[![PyPI version](https://badge.fury.io/py/evmoswallet.svg)](https://badge.fury.io/py/evmoswallet) [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/hanchon-live/evmoswallet/master.svg)](https://results.pre-commit.ci/latest/github/hanchon-live/evmoswallet/master)
+[![PyPI version](https://badge.fury.io/py/evmospy.svg)](https://badge.fury.io/py/evmospy)
 
 Python3.9+ utils for the Evmos Blockchain.
 
