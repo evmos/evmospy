@@ -17,6 +17,7 @@ find $DEST -type f -a \( -name "*.py" \) -a -exec sed -i '' -e s/"from "/"from e
 
 # Undo import fix for the google libs
 find $DEST -type f -a \( -name "*.py" \) -a -exec sed -i '' -e s/"from evmospy.evmosproto.google.protobuf import descriptor as _descriptor"/"from google.protobuf import descriptor as _descriptor"/g {} +
+find $DEST -type f -a \( -name "*.py" \) -a -exec sed -i '' -e s/"from evmospy.evmosproto.google.protobuf import descriptor_pool as _descriptor_pool"/"from google.protobuf import descriptor_pool as _descriptor_pool"/g {} +
 find $DEST -type f -a \( -name "*.py" \) -a -exec sed -i '' -e s/"from evmospy.evmosproto.google.protobuf import message as _message"/"from google.protobuf import message as _message"/g {} +
 find $DEST -type f -a \( -name "*.py" \) -a -exec sed -i '' -e s/"from evmospy.evmosproto.google.protobuf import reflection as _reflection"/"from google.protobuf import reflection as _reflection"/g {} +
 find $DEST -type f -a \( -name "*.py" \) -a -exec sed -i '' -e s/"from evmospy.evmosproto.google.protobuf import symbol_database as _symbol_database"/"from google.protobuf import symbol_database as _symbol_database"/g {} +
