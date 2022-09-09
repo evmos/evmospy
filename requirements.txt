@@ -1,0 +1,9 @@
+grpc-tools==0.0.1
+grpcio==1.41.0
+grpcio-tools==1.41.0
+protobuf==3.18.1
+six==1.16.0
+base58 == 2.1.0
+coincurve==15.0.1
+mnemonic == 0.20
+pycryptodomex==3.11.0
