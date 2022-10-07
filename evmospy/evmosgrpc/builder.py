@@ -1,7 +1,7 @@
 import base64
 
 import grpc
-from evmoswallet import Wallet
+from evmospy.evmoswallet import Wallet
 from google.protobuf.message import Message
 
 from evmospy.evmosgrpc.accounts import get_account_grpc
